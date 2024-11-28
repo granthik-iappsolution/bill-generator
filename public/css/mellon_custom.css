@@ -1,0 +1,20 @@
+
+.select2-container .select2-search--inline .select2-search__field{
+    padding-left: 0.4375rem;
+    margin-top: 6px;
+}
+.action_btn{
+    font-size: 1.75rem;
+}
+
+div.dt-button-collection .dt-button:not(.dt-btn-split-drop) {
+    background-color: white;
+}
+
+.light-style .bs-stepper.project_form:not(.wizard-modern), .dark-style .bs-stepper.project_form:not(.wizard-modern){
+    box-shadow: unset !important;
+}
+
+/*input:read-only, input:read-only:focus{*/
+/*    background-color: #f0f0f0;*/
+/*}*/
