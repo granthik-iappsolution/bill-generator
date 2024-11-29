@@ -14,7 +14,7 @@ class RolesSeeder extends Seeder
             'is_nd' => true,
         ],
         [
-            'name' => 'Technician',
+            'name' => 'User',
             'is_nd' => true
         ]
     ];

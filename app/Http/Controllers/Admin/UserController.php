@@ -23,7 +23,7 @@ use Illuminate\View\View;
 use Response;
 use Throwable;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Http\Request;
 
 class UserController extends AppBaseController
 {
@@ -196,5 +196,46 @@ class UserController extends AppBaseController
     public function userProfile()
     {
         return view('admin.users.userProfile.index');
+    }
+
+
+    public function search(Request $request) {
+
+        $term = $request->input('term');
+        $query = User::query()->whereHas('roles', function ($query) {
+                                $query->where('name', 'user'); // Replace 'user' with the desired role name
+                            });
+        $totalRecordCount = $query->count();
+        $query = GeneralHelperFunctions::applyPaginationToTheQuery($request, $query);
+        if ($term != '') {
+            $query = $query->search($term, null, true);
+            $totalRecordCount = $query->count();
+        }
+        $results = [];
+        foreach ($query->get() as $task) {
+            $results[] = self::getResultsArr_forGeneralUse($task->uuid);
+        }
+
+        return GeneralHelperFunctions::prepareSelect2Response_forDefaultListing($results, $term, $totalRecordCount, $request, true);
+    }
+
+
+    /**
+     * Prepares Result for search therapist.
+     * @param Therapist $therapist
+     * @param string $id
+     * @return array
+     */
+    public static function getResultsArr_forGeneralUse($uuid, $id = 'uuid')
+    {
+        $user = User::where('uuid', $uuid)->first();
+        if(is_null($user))  return [];
+        return [
+            'id' => $user->{$id},
+            'name' => $user->name,
+
+            // 'avatar' => $user->avatar_url['250'],
+            // 'status' => $user->html_status,
+        ];
     }
 }

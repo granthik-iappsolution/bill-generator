@@ -16,6 +16,13 @@ return [
         'children'  => [],
     ],
     [
+        'name'      => 'User Profiles',
+        'icon'      => '<i class="menu-icon tf-icons bx bx-user-pin"></i>',
+        'isHeader'  => false,
+        'route'     => 'admin.user-profiles.index',
+        'children'  => [],
+    ],
+    [
         'name'      => 'Roles',
         'icon'      => '<i class="menu-icon tf-icons bx bx-lock-open-alt"></i>',
         'isHeader'  => false,

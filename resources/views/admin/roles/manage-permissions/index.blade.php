@@ -11,6 +11,7 @@
 @section('breadcrumbs')
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb breadcrumb-style">
+            <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
             <li class="breadcrumb-item"><a href="{{ route('admin.roles.index') }}">Roles</a></li>
             <li class="breadcrumb-item active">Manage Permissions</li>
         </ol>

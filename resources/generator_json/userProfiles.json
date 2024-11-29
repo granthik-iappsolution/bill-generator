@@ -1,0 +1,157 @@
+[
+    {
+        "name": "id",
+        "dbType": "bigIncrements",
+        "searchable": false,
+        "inIndex": false,
+        "inForm": false
+    },
+    {
+        "name": "user_id",
+        "dbType": "integer:unsigned",
+        "searchable": false,
+        "inIndex": false,
+        "inForm": false
+    },
+    {
+        "name": "name",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "nullable",
+        "searchable": true
+    },
+    {
+        "name": "address",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "nullable",
+        "searchable": true
+    },
+    {
+        "name": "email",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "nullable",
+        "searchable": true
+    },
+    {
+        "name": "mobile",
+        "dbType": "integer",
+        "htmlType": "number",
+        "validations": "nullable",
+        "searchable": true
+    },
+    {
+        "name": "website",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "nullable",
+        "searchable": true
+    },
+    {
+        "name": "is_company",
+        "dbType": "boolean",
+        "htmlType": "checkbox",
+        "validations": "nullable",
+        "searchable": true
+    },
+    {
+        "name": "logo",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "nullable",
+        "searchable": true
+    },
+    {
+        "name": "sign",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "nullable",
+        "searchable": true
+    },
+    {
+        "name": "upi_code",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "nullable",
+        "searchable": true
+    },
+    {
+        "name": "default_template_id",
+        "dbType": "integer",
+        "htmlType": "select",
+        "validations": "nullable",
+        "searchable": true
+    },
+    {
+        "name": "enable_gst",
+        "dbType": "boolean",
+        "htmlType": "checkbox",
+        "validations": "nullable",
+        "searchable": true
+    },
+    {
+        "name": "gstin",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "nullable",
+        "searchable": true
+    },
+    {
+        "name": "default_bill_due_in",
+        "dbType": "integer:unsigned",
+        "htmlType": "number",
+        "validations": "nullable",
+        "searchable": true
+    },
+    {
+        "name": "default_terms",
+        "dbType": "longtext",
+        "htmlType": "textarea",
+        "validations": "nullable",
+        "searchable": true
+    },
+    {
+        "name": "enable_shipping",
+        "dbType": "boolean",
+        "htmlType": "checkbox",
+        "validations": "nullable",
+        "searchable": true
+    },
+    {
+        "name": "currency_code",
+        "dbType": "string",
+        "htmlType": "select",
+        "validations": "nullable",
+        "searchable": true
+    },
+    {
+        "name": "country_code",
+        "dbType": "string",
+        "htmlType": "select",
+        "validations": "nullable",
+        "searchable": true
+    },
+    {
+        "name": "uuid",
+        "dbType": "string",
+        "htmlType": "text",
+        "searchable": false,
+        "inIndex": false,
+        "inForm": false
+    },
+    {
+        "name": "created_at",
+        "dbType": "datetime",
+        "searchable": false,
+        "inIndex": false,
+        "inForm": false
+    },
+    {
+        "name": "updated_at",
+        "dbType": "datetime",
+        "searchable": false,
+        "inIndex": false,
+        "inForm": false
+    }
+]

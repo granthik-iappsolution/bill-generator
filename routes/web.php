@@ -41,6 +41,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function(){
     });
 
     Route::get('user/profile', [\App\Http\Controllers\Admin\UserController::class, 'userProfile'])->name('admin.user.profile');
+    Route::post('users/search', [\App\Http\Controllers\Admin\UserController::class, 'search'])->name('admin.users.search');
 
     Route::group(['prefix' => 'roles', 'as' => 'admin.roles.'], function(){
         Route::group(['prefix' => '{role}/manage-permissions', 'as' => 'permissions.manage.'], function(){
@@ -56,4 +57,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function(){
         Route::post('upload-media', [\App\Http\Controllers\Admin\UploadMediaController::class , 'uploadMedia'])->name('upload');
         Route::post('remove-media', [\App\Http\Controllers\Admin\UploadMediaController::class , 'removeMedia'])->name('remove');
     });
+
+    Route::resource('user-profiles', App\Http\Controllers\Admin\UserProfileController::class , ["as" => 'admin']);
+
 });

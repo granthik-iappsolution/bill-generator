@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\{User};
+use App\Models\{User, UserProfile};
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Intervention\Image\ImageManager;
@@ -119,6 +119,7 @@ class MediaController extends Controller
     {
         return match ($model) {
             'users' => new User(),
+            'user_profiles' => new UserProfile(),
             default => new User(),
         };
     }
