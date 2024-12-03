@@ -62,5 +62,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function(){
 
     Route::resource('customers', App\Http\Controllers\Admin\CustomerController::class , ["as" => 'admin'] );
 
+    Route::resource('items', App\Http\Controllers\Admin\ItemController::class , ["as" => 'admin'] );
+
+
 });
 

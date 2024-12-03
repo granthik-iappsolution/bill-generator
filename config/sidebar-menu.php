@@ -35,5 +35,12 @@ return [
         'isHeader'  => false,
         'route'     => 'admin.customers.index',
         'children'  => [],
-    ]
+    ],
+    [
+    'name'      => 'Items',
+    'icon'      => '<i class="menu-icon tf-icons bx bx-food-tag"></i>',
+    'isHeader'  => false,
+    'route'     => 'admin.items.index',
+    'children'  => [],
+]
 ];
