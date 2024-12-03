@@ -28,5 +28,12 @@ return [
         'isHeader'  => false,
         'route'     => 'admin.roles.index',
         'children'  => [],
+    ],
+    [
+        'name'      => 'Customers',
+        'icon'      => '<i class="menu-icon tf-icons bx bx-user-plus"></i>',
+        'isHeader'  => false,
+        'route'     => 'admin.customers.index',
+        'children'  => [],
     ]
 ];
