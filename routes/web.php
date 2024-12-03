@@ -60,4 +60,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function(){
 
     Route::resource('user-profiles', App\Http\Controllers\Admin\UserProfileController::class , ["as" => 'admin']);
 
+    Route::resource('customers', App\Http\Controllers\Admin\CustomerController::class , ["as" => 'admin'] );
+
 });
+
